@@ -12,7 +12,7 @@ function quickSort (arr, left, right) {
 	if(arguments.length == 1){
 		arguments.callee(arr, 0, arr.length - 1);
 	}
-	
+
 	if(left < right){	// 数组片段元素要多于1个
 		var partition = partitionIt(arr, left, right);
 		quickSort(arr, left, partition - 1);
@@ -25,11 +25,11 @@ function partitionIt(arr, left, right) {
 		leftPoniter = left - 1,		// 第一次++自增后变为left
 		rightPoiter = right,		// 第一次--自减后变为right-1
 		temp;
-	
+
 	while(true){
 		while(arr[++leftPoniter] < pivot);
 		while(rightPoiter > 0 && arr[--rightPoiter] > pivot);
-		
+
 		if(leftPoniter < rightPoiter){
 			temp = arr[leftPoniter];
 			arr[leftPoniter] = arr[rightPoiter];
@@ -38,20 +38,11 @@ function partitionIt(arr, left, right) {
 			break;
 		}
 	}
-	
+
 	arr[right] = arr[leftPoniter];
 	arr[leftPoniter] = pivot;
 	return leftPoniter;
 }
 
 
-// 测试代码
-
-var arr = [];
-for(var i = 0; i < 10; i++){
-	arr[i] = Math.floor(Math.random() * 20);
-}
-
-console.log('Initial: ', arr);
-quickSort(arr);
-console.log('Sorted: ', arr);
+module.exports = quickSort;
