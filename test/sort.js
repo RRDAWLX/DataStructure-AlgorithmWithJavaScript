@@ -3,7 +3,8 @@ const {
 	bubbleSort,
 	insertionSort,
 	quickSort,
-	selectionSort
+	selectionSort,
+	shellSort
 } = require('../algorithms/sort/index.js');
 
 let arr = [];
@@ -39,6 +40,13 @@ describe(`Sort: [${arr}]`, () => {
 
 	describe('.selectionSort()', () => {
 		let arr2 = selectionSort(arr.slice());
+		it(`result: [${arr2}]`, () => {
+			assert.deepEqual(arr2, sortedArr);
+		});
+	});
+
+	describe('.shellSort()', () => {
+		let arr2 = shellSort(arr.slice());
 		it(`result: [${arr2}]`, () => {
 			assert.deepEqual(arr2, sortedArr);
 		});
