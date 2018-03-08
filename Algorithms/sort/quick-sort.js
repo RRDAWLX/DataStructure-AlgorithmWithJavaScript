@@ -18,6 +18,8 @@ function quickSort (arr, left, right) {
 		quickSort(arr, left, partition - 1);
 		quickSort(arr, partition + 1, right);
 	}
+
+	return arr;
 }
 
 function partitionIt(arr, left, right) {

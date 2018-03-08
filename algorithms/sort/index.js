@@ -1,5 +1,4 @@
-const quickSort =  require('./quick-sort.js');
-
 module.exports = {
-  quickSort
+  bubbleSort: require('./bubble-sort'),
+  quickSort: require('./quick-sort.js')
 };

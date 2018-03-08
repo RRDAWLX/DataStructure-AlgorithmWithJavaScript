@@ -1,5 +1,5 @@
 const assert = require('assert');
-const {quickSort} = require('../algorithms/sort/index.js');
+const {bubbleSort, quickSort} = require('../algorithms/sort/index.js');
 
 let arr = [];
 for(var i = 0; i < 10; i++){
@@ -11,11 +11,15 @@ sortedArr.sort((a, b) => {
 });
 
 describe('Sort', () => {
+	describe('.bubbleSort()', () => {
+		it(`should sort the array as [${sortedArr}].`, () => {
+			assert.deepEqual(bubbleSort(arr.slice()), sortedArr);
+		});
+	});
+
 	describe('.quickSort()', () => {
 		it(`should sort the array as [${sortedArr}].`, () => {
-			let testArr = arr.slice();
-			quickSort(testArr);
-			assert.deepEqual(testArr, sortedArr);
-		})
+			assert.deepEqual(bubbleSort(arr.slice()), sortedArr);
+		});
 	});
 });
