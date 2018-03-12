@@ -2,10 +2,11 @@ const assert = require('assert');
 const {
 	bubbleSort,
 	insertionSort,
+	mergeSort,
 	quickSort,
 	selectionSort,
 	shellSort
-} = require('../algorithms/sort/index.js');
+} = require('../algorithm/sort/index.js');
 
 let arr = [];
 for(var i = 0; i < 10; i++){
@@ -26,6 +27,13 @@ describe(`Sort: [${arr}]`, () => {
 
 	describe('.insertionSort()', () => {
 		let arr2 = insertionSort(arr.slice());
+		it(`result: [${arr2}]`, () => {
+			assert.deepEqual(arr2, sortedArr);
+		});
+	});
+
+	describe('.mergeSort()', () => {
+		let arr2 = mergeSort(arr.slice());
 		it(`result: [${arr2}]`, () => {
 			assert.deepEqual(arr2, sortedArr);
 		});
