@@ -1,3 +1,4 @@
 module.exports = {
-  sequentialSearch: require('./sequentialSearch.js')
+  binarySearch: require('./binarySearch'),
+  sequentialSearch: require('./sequentialSearch')
 };
