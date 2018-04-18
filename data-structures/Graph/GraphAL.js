@@ -19,6 +19,47 @@ class GraphAL {
     this.edges++;
   }
 
+  dfs(v, arr = []) {
+    arr.push(v);
+    let list = this.adj[v];
+    for (let i = 0, len = list.length; i < len; i++) {
+      if (!arr.includes(list[i])) {
+        this.dfs(list[i], arr);
+      }
+
+      // 当图已被遍历，退出循环。
+      if (arr.length >= this.vertices) {
+        break;
+      }
+    }
+
+    return arr;
+  }
+
+  bfs(v) {
+    let arr = [v],
+    i = 0;
+
+    while(i < arr.length && arr.length < this.vertices) {
+      let list = this.adj[arr[i]];
+
+      for (let j = 0, len = list.length; j < len; j++) {
+        if (!arr.includes(list[j])) {
+          arr.push(list[j]);
+        }
+
+        // 当图已被遍历，退出循环。
+        if (arr.length >= this.vertices) {
+          break;
+        }
+      }
+
+      i++;
+    }
+
+    return arr;
+  }
+
   toString() {
     return this.adj.map((list, v) => {
       return `${v} -> ${list.join(' ')}`;
