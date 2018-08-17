@@ -28,9 +28,12 @@ function partitionIt(arr, left, right) {
 		rightPointer = right,		// 第一次--自减后变为right-1
 		temp;
 
+	// 实际上，在会退出循环时，leftPoniter 一定等于 rightPointer，
+	// 且 arr[leftPoniter] 一定大于等于 pivot，
+	// 当且仅当 leftPoniter = right 时 arr[leftPoniter] = pivot。
 	while(true){
-		while(arr[++leftPoniter] < pivot);
-		while(rightPointer > 0 && arr[--rightPointer] > pivot);
+		while(leftPoniter < rightPointer && arr[++leftPoniter] <= pivot);
+		while(rightPointer > leftPoniter && arr[--rightPointer] >= pivot);
 
 		if(leftPoniter < rightPointer){
 			temp = arr[leftPoniter];
