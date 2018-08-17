@@ -25,17 +25,17 @@ function quickSort (arr, left, right) {
 function partitionIt(arr, left, right) {
 	var pivot = arr[right],
 		leftPoniter = left - 1,		// 第一次++自增后变为left
-		rightPoiter = right,		// 第一次--自减后变为right-1
+		rightPointer = right,		// 第一次--自减后变为right-1
 		temp;
 
 	while(true){
 		while(arr[++leftPoniter] < pivot);
-		while(rightPoiter > 0 && arr[--rightPoiter] > pivot);
+		while(rightPointer > 0 && arr[--rightPointer] > pivot);
 
-		if(leftPoniter < rightPoiter){
+		if(leftPoniter < rightPointer){
 			temp = arr[leftPoniter];
-			arr[leftPoniter] = arr[rightPoiter];
-			arr[rightPoiter] = temp;
+			arr[leftPoniter] = arr[rightPointer];
+			arr[rightPointer] = temp;
 		}else{
 			break;
 		}

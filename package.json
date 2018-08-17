@@ -1,5 +1,5 @@
 {
-  "name": "datastructuresalgorithms_js",
+  "name": "data-structures-and-algorithms",
   "version": "1.0.0",
   "description": "Data structures and algorithm with JavaScript",
   "main": "index.js",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RRDAWLX/DataStructuresAlgorithms_JS.git"
+    "url": "git+https://github.com/RRDAWLX/data-structures-and-algorithms.git"
   },
-  "author": "",
+  "author": "rrdawlx",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RRDAWLX/DataStructuresAlgorithms_JS/issues"
+    "url": "https://github.com/RRDAWLX/data-structures-and-algorithms/issues"
   },
-  "homepage": "https://github.com/RRDAWLX/DataStructuresAlgorithms_JS#readme"
+  "homepage": "https://github.com/RRDAWLX/data-structures-and-algorithms#readme"
 }

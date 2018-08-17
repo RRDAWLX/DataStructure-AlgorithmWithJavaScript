@@ -2,7 +2,7 @@ const assert = require('assert');
 const {
   binarySearch,
   sequentialSearch
-} = require('../algorithm/search');
+} = require('../algorithms/search');
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9],
   val1 = 8,

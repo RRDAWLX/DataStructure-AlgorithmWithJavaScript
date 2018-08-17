@@ -6,7 +6,7 @@ const {
 	quickSort,
 	selectionSort,
 	shellSort
-} = require('../algorithm/sort/index.js');
+} = require('../algorithms/sort/index.js');
 
 let arr = [];
 for(var i = 0; i < 10; i++){
