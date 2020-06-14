@@ -115,7 +115,9 @@ function calc (expression) {
   return calculate(tranformInfixToPostfix(parseIntoInfix(expression)))
 }
 
-module.exports.parseIntoInfix = parseIntoInfix
-module.exports.tranformInfixToPostfix = tranformInfixToPostfix
-module.exports.calculate = calculate
-module.exports.calc = calc
+module.exports = {
+  parseIntoInfix,
+  tranformInfixToPostfix,
+  calculate,
+  calc,
+}
