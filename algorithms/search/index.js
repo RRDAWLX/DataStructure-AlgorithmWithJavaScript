@@ -1,4 +1,5 @@
 module.exports = {
   binarySearch: require('./binarySearch'),
-  sequentialSearch: require('./sequentialSearch')
+  nthMax: require('./nthMax'),
+  sequentialSearch: require('./sequentialSearch'),
 };
